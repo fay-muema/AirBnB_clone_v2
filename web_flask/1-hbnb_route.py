@@ -4,6 +4,7 @@ from flask import Flask
 
 app = Flask(__name__)
 
+
 @app.route('/', strict_slashes=False)
 def hello():
     """function too print hello"""
@@ -11,8 +12,6 @@ def hello():
 
 
 @app.route('/hbnb', strict_slashes=False)
-
-
 def hbnb():
     """second function"""
     return 'HBNB'
