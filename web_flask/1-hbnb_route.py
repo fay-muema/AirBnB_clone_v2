@@ -8,13 +8,15 @@ app.route('/', strict_slashes=False)
 
 
 def hello():
+    """function too print hello"""
     return 'Hello HBNB!'
 
 
-app.route('/', strict_slashes=False)
+app.route('/hbnb', strict_slashes=False)
 
 
 def hbnd():
+    """second function"""
     return 'HBND'
 
 
