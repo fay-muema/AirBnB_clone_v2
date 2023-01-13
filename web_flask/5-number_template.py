@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ Script that runs an app with Flask framework """
-from flask import Flask
+from flask import Flask, render_template
 
 
 app = Flask(__name__)
@@ -30,7 +30,18 @@ def text_py(text='is cool'):
     """Function called to return /python/<text> route"""
     if text is not 'is cool':
         text = text.replace('_', ' ')
-    return 'Python %s' % text
+
+
+@app.route('/number/<int:n>', strict_slashes=False)
+def text_nu(n):
+    """Function called to return number"""
+    return '%d is a number' % n
+
+
+@app.route('/number_template/<int:n>', strict_slashes=False)
+def template_t(n):
+    """function that returns a template with number"""
+    return render_template('5-number.html', number=n)
 
 
 if __name__ == "__main__":
