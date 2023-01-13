@@ -24,8 +24,9 @@ def text_c(text):
     return 'C %s' % text.replace('_', ' ')
 
 
+@app.route('/python/', strict_slashes=False)
 @app.route('/python/<text>', strict_slashes=False)
-def text_py(text ='is cool'):
+def text_py(text='is cool'):
     """Function called to return /python/<text> route"""
     if text is not 'is cool':
         text = text.replace('_', ' ')
