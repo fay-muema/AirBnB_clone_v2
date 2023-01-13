@@ -15,9 +15,9 @@ def hello():
 @app.route('/hbnb', strict_slashes=False)
 
 
-def hbnd():
+def hbnb():
     """second function"""
-    return 'HBND'
+    return 'HBNB'
 
 
 if __name__ == "__main__":
